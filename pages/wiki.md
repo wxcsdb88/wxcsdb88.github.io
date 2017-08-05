@@ -8,7 +8,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
-> 我愿与您一起分享美好时光, coding
+> 我愿与你一起分享美好时光
 
 <ul class="listing">
 {% for wiki in site.wiki %}
