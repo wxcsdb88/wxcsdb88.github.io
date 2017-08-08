@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Python3字符串格式化用法"
+title:  "python3 字符串格式化用法"
 date:   2017-08-09 00:00:00
 categories: Python3
-description: Python3格式话字符串用法
+description: python3 格式话字符串用法
 keywords: python,format,string
 author: wxcsdb88
 ---
 
-Python3使用 format 对字符串进行格式化
+python3 使用 format 对字符串进行格式化
 
 ## 数字格式化
 <style type="text/css">

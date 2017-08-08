@@ -1,21 +1,21 @@
 ---
 layout: post
-title:  "git log格式配置"
+title:  "git log 格式配置"
 date:   2017-08-09 00:00:00
 categories: Git
-description: git log格式配置
+description: git log 格式配置
 keywords: git
 author: wxcsdb88
 ---
 
-git log格式配置
+git log 格式配置
 
 ## git log 配置
 ```
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 ```
 上述可以使用`git lg`查看git log
-### pretty 使用
+## pretty 使用
 git log --pretty=format:'%h %ar %an'
 把format后面单引号中的内容替换为你想要的格式，即可实现自定义的log输出格式。这里的%h, %ar等是一些git预定义的占位符，完整的列表如下：
 

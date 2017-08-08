@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "linux系统安装redis"
+title:  "linux 系统安装 redis"
 date:   2017-08-08 00:00:00
 categories: NoSQL
-description: linux系统安装redis
+description: linux 系统安装 redis
 keywords: db,NoSQL,redis
 author: wxcsdb88
 ---
