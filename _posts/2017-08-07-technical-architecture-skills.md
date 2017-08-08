@@ -2,7 +2,7 @@
 layout: post
 title:  "程序员晋升架构师的十大必备技能"
 date:   2017-08-07 00:00:00
-categories: career
+categories: Career
 description: 程序员晋升架构师的十大必备技能
 keywords: career,架构师
 author: wxcsdb88
