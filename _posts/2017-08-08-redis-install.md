@@ -17,7 +17,7 @@ cd  /usr/local/redis
 wget http://download.redis.io/releases/redis-4.0.1.tar.gz
 sudo tar xzf redis-4.0.1.tar.gz
 #建立链接
-ln -s redis-2.6.14 redis
+ln -s redis-4.0.1 redis
 cd redis
 #安装到指定目录中
 sudo make PREFIX=/usr/local/redis install
@@ -30,7 +30,7 @@ sudo cp /usr/local/src/redis/utils/redis_init_script /etc/init.d/redis
 sudo cp  /usr/local/src/redis/redis.conf  /usr/local/redis/6379.conf
 vim /etc/rc.d/init.d/redis  
 
-#/usr/local/redis/
+#/etc/init.d/redis 
 $EXEC $CONF &，后边的 &，表示将服务转到后台运行；
 EXEC、CLIEXEC、CONF 等三处路径都要改
 ```
