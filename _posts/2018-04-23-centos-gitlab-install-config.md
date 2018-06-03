@@ -2,7 +2,7 @@
 layout: post
 title:  "Gitlab install and config with docker"
 date:   2018-04-23 23:27:15
-categories: git, tools
+categories: git tools
 description: gitlab install and config with docker
 keywords: git, vcs, gitlab
 author: wxcsdb88
