@@ -13,21 +13,26 @@ author: wxcsdb88
 在 `Java` 环境中，常用的证书形式有 `p12`、`jks` 格式等。`HTTPS` 证书我们一般会选择配置在 `nginx` 上。
 本文使用编程方式进行 `HTTPS` 配置。
 
-## SpringBoot 版本
+# SpringBoot 版本
+
 `springBootVersion = '2.0.0.M3'`
 
-## keytool 生成证书
+# keytool 生成证书
 
-```
+```text
 keytool -genkey -alias tomcat  -storetype PKCS12 -keyalg RSA -keysize 2048 \
 -keystore keystore.p12 -validity 3650
 ```
+
 具体用法可以参考: `keytool -genkey -help`
 
 ## 配置 HTTPS
+
 ### 仅 HTTPS 生效的配置
+
 `application.yml` 配置修改
-```
+
+```yml
 server:
   port: 8443
   ssl:
@@ -36,13 +41,16 @@ server:
     key-store-type: PKCS12
     key-alias: tomcat
 ```
+
 ------
 > 下面是两种同时支持 HTTP 和 HTTPS 配置的方法
 
 ### 配置 HTTP 转发 到 HTTPS <推荐>
+
 由于不能在配置文件中同时配置两个`connector`, 所以要以编程的方式配置 `HTTP connector`，
 然后重定向到 `HTTPS connector`
-```
+
+```java
 @Bean
 public ServletWebServerFactory servletContainer() {
     TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
@@ -59,20 +67,24 @@ public ServletWebServerFactory servletContainer() {
     return connector;
 }
 ```
+
 ------
+
 ### 配置文件配置 HTTP, 编码方式配置 HTTPS
 
 这种方式不能禁止 `HTTP` 访问， 出于安全考虑同时需要支持 `HTTP`， 建议使用编码配置 `HTTP`
 转发 `HTTPS` 的方式或者编码配置 `HTTP`。
 
 `application.yml` 配置修改
-```
+
+```yml
 server:
   port: 8081
 ```
 
 编码方式配置 `HTTPS connector`
-```
+
+```java
 @Bean
    public ServletWebServerFactory servletContainer() {
        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();

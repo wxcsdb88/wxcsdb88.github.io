@@ -10,38 +10,47 @@ author: wxcsdb88
 
 git 基本操作命令
 
-## 更新本地代码
-### 暂存本地代码
-```
+# 更新本地代码
+
+## 暂存本地代码
+
+```bash
 git status -s
 git stash
 ```
-### 更新代码
-```
+
+## 更新代码
+
+```bash
 git pull origin
 git status -s
 ```
-### 取出暂存代码
-```
+
+## 取出暂存代码
+
+```bash
 git stash pop
 git status -s
 ```
 
 >合并代码或解决冲突
 
-### 重新添加代码到本地版本
-```
+## 重新添加代码到本地版本
+
+```bash
 git add -A
 ```
 
-### 提交变动到本地代码仓库
-```
+## 提交变动到本地代码仓库
+
+```bash
 git commit -m 'description for the commit'
 git status -s
 git log -p
 ```
 
-### 提交本地代码到远程仓库
-```
+## 提交本地代码到远程仓库
+
+```bash
 git push origin
 ```

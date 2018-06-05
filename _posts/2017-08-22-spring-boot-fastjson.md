@@ -10,17 +10,20 @@ author: wxcsdb88
 
 SpringBoot 项目(2.0.0.M3) 使用 fastjson 替换默认的jackson序列化的配置说明。
 
-## SpringBoot 及 fastjson 版本
+# SpringBoot 及 fastjson 版本
+
 `springBootVersion = '2.0.0.M3'`
 
-```
+```groovy
 org.springframework.boot:spring-boot-starter-web
 com.alibaba:fastjson:1.2.37
 ```
 
-## 配置
+# 配置
+
 有两种实现方式，一是注解 `Bean`，如下所示:
-```
+
+```java
 // SpringBootApplication
 @Bean
  public HttpMessageConverters fastJsonHttpMessageConverters() {
@@ -36,8 +39,10 @@ com.alibaba:fastjson:1.2.37
      return new HttpMessageConverters(converter);
  }
 ```
+
 另一种是重写 `configureMessageConverters` (本人采用这种实现，减少 `Main` 函数文件中配置项)
-```
+
+```java
 @Configuration
 @ComponentScan(basePackageClasses = AppApplication.class, useDefaultFilters = true)
 public class MvcConfiguration extends WebMvcConfigurationSupport {

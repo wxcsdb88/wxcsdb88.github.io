@@ -10,8 +10,9 @@ author: wxcsdb88
 
 ubuntu 14.04 安装 redis 并设置开机启动
 
-## Install
-```
+# Install
+
+```bash
 sudo mkdir /usr/local/redis
 cd  /usr/local/redis
 wget http://download.redis.io/releases/redis-4.0.1.tar.gz
@@ -23,9 +24,11 @@ cd redis
 sudo make PREFIX=/usr/local/redis install
 ```
 
-## Service
+# Service
+
 复制脚本到/etc/rc.d/init.d目录
-```
+
+```bash
 sudo cp /usr/local/src/redis/utils/redis_init_script /etc/init.d/redis  
 sudo cp  /usr/local/src/redis/redis.conf  /usr/local/redis/6379.conf
 vim /etc/rc.d/init.d/redis  
@@ -35,20 +38,23 @@ $EXEC $CONF &，后边的 &，表示将服务转到后台运行；
 EXEC、CLIEXEC、CONF 等三处路径都要改
 ```
 
-## Env
-```
+# Env
+
+```bash
 vi /etc/profile
 export REDIS=/usr/local/redis/bin
 export PATH=$REDIS:$PATH
 source /etc/profile
 ```
 
-## onboot startup
-```
+# onboot startup
+
+```bash
 sudo update-rc.d redis defaults
 ```
 
-## remove onboot
-```
+# remove onboot
+
+```bash
 sudo update-rc.d -f redis remove
 ```

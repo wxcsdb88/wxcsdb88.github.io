@@ -1,19 +1,18 @@
 ---
-
-layout: post
-title: "Junit 指定多组测试数据"
-date: 2017-12-10 22:00:00
-categories: JAVA Junit
-description: Junit 多组测试数据测试
+layout: post  
+title: "Junit 指定多组测试数据"  
+date: 2017-12-10 22:00:00  
+categories: JAVA Junit  
+description: Junit 多组测试数据测试  
 keywords: java, junit
 author: wxcsdb88
 ---
-
 
 使用 `Junit` 指定多组测试数据进行测试。
 
 测试方法使用的 `SHA3Utils` 代码仓库地址: [java-core](https://github.com/futurever/java-core.git)
 
+---
 Parameterized 测试
 ------------------
 
